@@ -168,3 +168,12 @@ export interface Type {
     slot: number;
     type: Species;
 }
+
+/*
+    Con la extension Paste Json as Code
+    con el comando comand + shift + p 
+    seleccionar  Paste Json as Code 
+    Pones el nombre (Pokemon por ejemplo) y voila
+
+    aasí no es necesario ir a https://app.quicktype.io/
+*/
