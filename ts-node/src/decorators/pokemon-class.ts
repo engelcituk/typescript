@@ -32,10 +32,31 @@ function CheckValidPokemonId() {
     }
 }
 
+function readOnly( isWritable:boolean = true ):Function {
+    return function(target: any, propertyKey: string, ){
+        const descriptor: PropertyDescriptor = {
+            get(){
+                return 'Luceli'
+            },
+            set(this, val){
+                // console.log(this, val)
+                Object.defineProperty( this, propertyKey,{
+                    value: val,
+                    writable: !isWritable,
+                    enumerable: false
+                })
+            }
+        }
+
+        return descriptor
+    }
+}
+
 @bloquearPrototipo
 @printToConsoleConditional( false )
 
 export class MiPokemon {
+    @readOnly()
     public publicApi: string = 'https://pokeapi.co/' 
 
     constructor(

@@ -11,4 +11,6 @@ import {  MiPokemon } from './decorators/pokemon-class';
 
 // (MiPokemon.prototype as any).customName = 'Pikachu'
 
-    charmander.savePokemonToDB(3)
+    // charmander.savePokemonToDB(3)
+    charmander.publicApi = 'ecituk.com'
+    console.log(charmander)
