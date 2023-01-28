@@ -7,6 +7,8 @@ import {  MiPokemon } from './decorators/pokemon-class';
     .catch( err => console.log(err))
     .finally( ()=> console.log('Fin de getPokemon') )*/
 
-    const charmander = new MiPokemon('Charmander')
+    // const charmander = new MiPokemon('Charmander')
 
-    console.log(charmander)
+(MiPokemon.prototype as any).customName = 'Pikachu'
+
+    // console.log(charmander)
