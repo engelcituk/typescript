@@ -3,7 +3,17 @@ function printToConsole( constructor: Function ) {
     console.log(constructor)
 }
 
-@printToConsole
+const printToConsoleConditional = (print: boolean = false ):Function => {
+    if(print){
+        return printToConsole
+    } else {
+
+        return () => {}
+    }
+}
+
+
+@printToConsoleConditional( true )
 export class MiPokemon {
     public publicApi: string = 'https://pokeapi.co/' 
 
